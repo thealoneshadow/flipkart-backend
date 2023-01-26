@@ -1,6 +1,7 @@
 /** @format */
 
 const express = require("express");
+const serverless = require("serverless-http");
 const app = express();
 const mongoose = require("mongoose");
 const env = require("dotenv");
@@ -41,3 +42,5 @@ app.use("/api", adminOrderRoute);
 app.listen(process.env.PORT, () => {
 	console.log(process.env.PORT);
 });
+
+module.exports.handler = serverless(app);

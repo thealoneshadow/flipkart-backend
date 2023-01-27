@@ -4,7 +4,7 @@
 	"description": "Flipkart Backend",
 	"main": "index.js",
 	"scripts": {
-		"start": "./node_modules/.bin/netlify-lambda serve src",
+		"start": "node ./node_modules/.bin/netlify-lambda serve src",
 		"build": "./node_modules/.bin/netlify-lambda build src"
 	},
 	"keywords": [
